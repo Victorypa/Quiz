@@ -27,18 +27,18 @@
                 </form>
             </div>
 
-            <div class="row" v-if="booleans.email">
+            <div v-if="booleans.email">
                 <h1 class="main-caption">
-                  Укажите свой E-mail адрес,<br> чтобы получить результат тестирования
+                  Укажите свой E-mail адрес, чтобы получить результат тестирования
                 </h1>
                 <form @submit.prevent="go('email')">
                     <div class="form-wrapper">
-                      <input type="email"
-                             placeholder="Ваша почта"
+                      <input type="email"  value=""
                              v-model="person.email"
                              required
                              autofocus
                              >
+                             <label class="full-name">E-mail</label>
                       <div class="input-info">*Пожалуйста, введите всвой E-mail адрес, чтобы продолжить</div>
                     </div>
                     <div class="button-wrapper">
@@ -51,9 +51,9 @@
                 </form>
             </div>
 
-            <div class="row" v-if="booleans.phone">
+            <div v-if="booleans.phone">
                 <h1 class="main-caption">
-                    Укажите свой телефон,<br> если вы хотите проконсультироваться <br> по вопросу ремонта <br>  или услуг интерьерного стилиста.
+                    Укажите свой телефон, если вы хотите проконсультироваться по вопросу ремонта   или услуг интерьерного стилиста.
                 </h1>
 
                 <form @submit.prevent="go('phone')">
@@ -140,6 +140,7 @@
 position: relative;
 
 margin: 0 auto;
+
 }
 
 input {
@@ -235,7 +236,7 @@ background-color: #2e3854;
 }
 
 .content-center {
-  padding: 20px 0;
+    padding: 100px 0;
 }
 
 @media (min-width: 700px) {
@@ -249,6 +250,9 @@ background-color: #2e3854;
     height: 100vh;
 
     padding: 0;
+  }
+  .form-wrapper {
+    width: 50%;
   }
 }
 
