@@ -60,6 +60,13 @@
           <div class="image-text">Вся квартира</div>
         </button>
         </div>
+        <div class="button-wrapper">
+            <button type="submit"
+                    class="primary-button"
+                    >
+               Далее
+           </button>
+         </div>
       </div>
 
     </div>
@@ -67,28 +74,6 @@
 </template>
 
 <style lang="scss" scoped>
-.body {
-min-width: 320px;
-
-}
-
-.container {
-
-font-family: 'Rubik', sans-serif;
-
-max-width: 540px;
-
-margin: 0 auto;
-}
-
-.main-caption {
-text-align: center;
-font-weight: 400;
-
-line-height: 1.5;
-font-size: 20px;
-
-}
 
 svg {
 fill: #a1adb7;
@@ -98,9 +83,11 @@ height: auto;
 .image {
   &-wrapper {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: space-between;
+
+  max-width: 600px;
+  margin: 0 auto;
 
   }
   &-card {
@@ -112,6 +99,14 @@ height: auto;
   text-decoration: none;
 
   }
+}
+
+.main-caption {
+  max-width: 600px;
+}
+
+.content-center {
+  padding: 50px 0;
 }
 
 .button-card {
@@ -143,6 +138,34 @@ cursor: pointer;
   }
 }
 
+.primary-button {
+height: 42px;
+font-size: 15px;
+font-weight: 400;
+background-color: #0a0c12;
+color: #fff;
+
+margin: 20px 0;
+padding: 0 30px;
+letter-spacing: .025em;
+
+border: 0;
+border-radius: 2px;
+
+line-height: 42px;
+outline: none;
+cursor: pointer;
+
+}
+
+.primary-button:hover {
+background-color: #2e3854;
+}
+
+.button-wrapper {
+margin: 0 auto;
+}
+
 svg {
 margin-bottom: 20px;
 }
@@ -157,7 +180,6 @@ transition: stroke .15s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -5%;
     height: 100vh;
   }
 }
@@ -172,7 +194,13 @@ justify-content: center;
 margin-bottom: 20px;
 margin-left: 0px;
 }
+}
 
+@media (max-width: 540px) {
+  .button-wrapper {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 </style>
